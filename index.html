@@ -1,37 +1,31 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تحدي العقول - لعبة التحدي المنطقي النهائية</title>
-    <link rel="stylesheet" href="styles-telegram.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <!-- Telegram Web App SDK -->
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <title>MindShift - The Ultimate Logic Challenge</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="game-container">
         <!-- Header -->
         <header class="game-header">
-            <h1 class="game-title">تحدي العقول</h1>
-            <div class="user-info" id="user-info">
-                <span id="user-name">مرحباً!</span>
-            </div>
+            <h1 class="game-title">MindShift</h1>
             <div class="game-stats">
                 <div class="stat">
-                    <span class="stat-label">المستوى</span>
+                    <span class="stat-label">Level</span>
                     <span class="stat-value" id="current-level">1</span>
                 </div>
                 <div class="stat">
-                    <span class="stat-label">النقاط</span>
+                    <span class="stat-label">Score</span>
                     <span class="stat-value" id="current-score">0</span>
                 </div>
                 <div class="stat">
-                    <span class="stat-label">الأرواح</span>
+                    <span class="stat-label">Lives</span>
                     <span class="stat-value" id="current-lives">3</span>
                 </div>
                 <div class="stat">
-                    <span class="stat-label">الوقت</span>
+                    <span class="stat-label">Time</span>
                     <span class="stat-value" id="timer">60</span>
                 </div>
             </div>
@@ -42,16 +36,9 @@
             <!-- Start Screen -->
             <div class="screen" id="start-screen">
                 <div class="start-content">
-                    <h2>مرحباً بك في تحدي العقول</h2>
-                    <p>اختبر ذكاءك مع تحديات متزايدة الصعوبة!</p>
-                    <button class="btn btn-primary" id="start-game-btn">ابدأ التحدي</button>
-                    <div class="language-toggle">
-                        <button class="btn btn-secondary" id="toggle-language">English</button>
-                    </div>
-                    <div class="telegram-features">
-                        <button class="btn btn-telegram" id="share-score-btn">شارك النتيجة</button>
-                        <button class="btn btn-telegram" id="invite-friends-btn">ادع الأصدقاء</button>
-                    </div>
+                    <h2>Welcome to MindShift</h2>
+                    <p>Test your intelligence with increasingly difficult challenges!</p>
+                    <button class="btn btn-primary" id="start-game-btn">Start Challenge</button>
                 </div>
             </div>
 
@@ -59,7 +46,7 @@
             <div class="screen hidden" id="game-screen">
                 <div class="challenge-container">
                     <div class="challenge-header">
-                        <h3 id="challenge-title">التحدي الأول</h3>
+                        <h3 id="challenge-title">Challenge 1</h3>
                         <div class="timer-bar">
                             <div class="timer-fill" id="timer-fill"></div>
                         </div>
@@ -67,7 +54,7 @@
                     
                     <div class="challenge-content">
                         <div class="question-area">
-                            <p id="question-text">ما هو الرقم التالي: 2، 4، 8، 16، ؟</p>
+                            <p id="question-text">What comes next: 2, 4, 8, 16, ?</p>
                         </div>
                         
                         <!-- Multiple Choice Options -->
@@ -80,8 +67,8 @@
                         
                         <!-- Input Field (for text answers) -->
                         <div class="input-container hidden" id="input-container">
-                            <input type="text" id="answer-input" placeholder="أدخل إجابتك">
-                            <button class="btn btn-primary" id="submit-answer-btn">إرسال</button>
+                            <input type="text" id="answer-input" placeholder="Enter your answer">
+                            <button class="btn btn-primary" id="submit-answer-btn">Submit</button>
                         </div>
                         
                         <!-- Memory Flash Area -->
@@ -106,39 +93,31 @@
             <!-- Game Over Screen -->
             <div class="screen hidden" id="game-over-screen">
                 <div class="game-over-content">
-                    <h2 id="game-over-title">انتهت اللعبة</h2>
-                    <p id="final-score">النقاط النهائية: 0</p>
-                    <p id="final-level">المستويات المكتملة: 0</p>
-                    <div class="game-over-actions">
-                        <button class="btn btn-primary" id="restart-game-btn">العب مرة أخرى</button>
-                        <button class="btn btn-telegram" id="share-final-score-btn">شارك النتيجة</button>
-                    </div>
+                    <h2 id="game-over-title">Game Over</h2>
+                    <p id="final-score">Final Score: 0</p>
+                    <p id="final-level">Levels Completed: 0</p>
+                    <button class="btn btn-primary" id="restart-game-btn">Play Again</button>
                 </div>
             </div>
 
             <!-- Victory Screen -->
             <div class="screen hidden" id="victory-screen">
                 <div class="victory-content">
-                    <h2>تهانينا!</h2>
-                    <p>لقد أكملت جميع التحديات!</p>
-                    <p id="victory-score">النقاط النهائية: 0</p>
-                    <div class="victory-actions">
-                        <button class="btn btn-primary" id="play-again-btn">العب مرة أخرى</button>
-                        <button class="btn btn-telegram" id="share-victory-btn">شارك الإنجاز</button>
-                        <button class="btn btn-telegram" id="challenge-friends-btn">تحدى الأصدقاء</button>
-                    </div>
+                    <h2>Congratulations!</h2>
+                    <p>You've completed all challenges!</p>
+                    <p id="victory-score">Final Score: 0</p>
+                    <button class="btn btn-primary" id="play-again-btn">Play Again</button>
                 </div>
             </div>
         </main>
 
         <!-- Footer -->
         <footer class="game-footer">
-            <p>&copy; 2025 تحدي العقول - تحدى عقلك</p>
-            <p class="telegram-info">يعمل على تليجرام</p>
+            <p>&copy; 2025 MindShift - Challenge Your Mind</p>
         </footer>
     </div>
 
-    <script src="script-telegram.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
 
