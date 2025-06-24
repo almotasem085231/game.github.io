@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindShift - The Ultimate Logic Challenge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Header -->
+        <header class="game-header">
+            <h1 class="game-title">MindShift</h1>
+            <div class="game-stats">
+                <div class="stat">
+                    <span class="stat-label">Level</span>
+                    <span class="stat-value" id="current-level">1</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Score</span>
+                    <span class="stat-value" id="current-score">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Lives</span>
+                    <span class="stat-value" id="current-lives">3</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Time</span>
+                    <span class="stat-value" id="timer">60</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Game Area -->
+        <main class="game-main">
+            <!-- Start Screen -->
+            <div class="screen" id="start-screen">
+                <div class="start-content">
+                    <h2>Welcome to MindShift</h2>
+                    <p>Test your intelligence with increasingly difficult challenges!</p>
+                    <button class="btn btn-primary" id="start-game-btn">Start Challenge</button>
+                </div>
+            </div>
+
+            <!-- Game Screen -->
+            <div class="screen hidden" id="game-screen">
+                <div class="challenge-container">
+                    <div class="challenge-header">
+                        <h3 id="challenge-title">Challenge 1</h3>
+                        <div class="timer-bar">
+                            <div class="timer-fill" id="timer-fill"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="challenge-content">
+                        <div class="question-area">
+                            <p id="question-text">What comes next: 2, 4, 8, 16, ?</p>
+                        </div>
+                        
+                        <!-- Multiple Choice Options -->
+                        <div class="options-container" id="options-container">
+                            <button class="option-btn" data-answer="24">24</button>
+                            <button class="option-btn" data-answer="32">32</button>
+                            <button class="option-btn" data-answer="30">30</button>
+                            <button class="option-btn" data-answer="28">28</button>
+                        </div>
+                        
+                        <!-- Input Field (for text answers) -->
+                        <div class="input-container hidden" id="input-container">
+                            <input type="text" id="answer-input" placeholder="Enter your answer">
+                            <button class="btn btn-primary" id="submit-answer-btn">Submit</button>
+                        </div>
+                        
+                        <!-- Memory Flash Area -->
+                        <div class="memory-container hidden" id="memory-container">
+                            <div class="memory-display" id="memory-display">
+                                <div class="color-box" data-color="red"></div>
+                                <div class="color-box" data-color="blue"></div>
+                                <div class="color-box" data-color="green"></div>
+                                <div class="color-box" data-color="yellow"></div>
+                            </div>
+                            <div class="memory-input" id="memory-input">
+                                <button class="color-btn" data-color="red" style="background-color: #ff4757;"></button>
+                                <button class="color-btn" data-color="blue" style="background-color: #3742fa;"></button>
+                                <button class="color-btn" data-color="green" style="background-color: #2ed573;"></button>
+                                <button class="color-btn" data-color="yellow" style="background-color: #ffa502;"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Game Over Screen -->
+            <div class="screen hidden" id="game-over-screen">
+                <div class="game-over-content">
+                    <h2 id="game-over-title">Game Over</h2>
+                    <p id="final-score">Final Score: 0</p>
+                    <p id="final-level">Levels Completed: 0</p>
+                    <button class="btn btn-primary" id="restart-game-btn">Play Again</button>
+                </div>
+            </div>
+
+            <!-- Victory Screen -->
+            <div class="screen hidden" id="victory-screen">
+                <div class="victory-content">
+                    <h2>Congratulations!</h2>
+                    <p>You've completed all challenges!</p>
+                    <p id="victory-score">Final Score: 0</p>
+                    <button class="btn btn-primary" id="play-again-btn">Play Again</button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="game-footer">
+            <p>&copy; 2025 MindShift - Challenge Your Mind</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

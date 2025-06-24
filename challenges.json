@@ -1,0 +1,82 @@
+[
+  {
+    "id": "level1_pattern_completion",
+    "type": "pattern_completion",
+    "level": 1,
+    "question": "What comes next: 2, 4, 8, 16, ?",
+    "answer": "32",
+    "time_limit": 60
+  },
+  {
+    "id": "level2_memory_flash",
+    "type": "memory_flash",
+    "level": 2,
+    "question": "Repeat the color sequence.",
+    "sequence_length": 4,
+    "time_limit": 50
+  },
+  {
+    "id": "level3_logic_gate",
+    "type": "logic_riddle",
+    "level": 3,
+    "question": "If A is true, B is false. If B is false, C is true. Is C true or false?",
+    "answer": "true",
+    "time_limit": 45
+  },
+  {
+    "id": "level4_math_trap",
+    "type": "math_grid",
+    "level": 4,
+    "question": "Find the missing number in the grid.",
+    "grid": [[1, 2, 3], [4, 5, 6], [7, 8, "?"]],
+    "answer": "9",
+    "time_limit": 40
+  },
+  {
+    "id": "level5_visual_rotation",
+    ""type": "visual_rotation",
+    "level": 5,
+    "question": "Match the rotated symbol to its original.",
+    "time_limit": 35
+  },
+  {
+    "id": "level6_anagram",
+    "type": "anagram",
+    "level": 6,
+    "question": "Unscramble the letters to form a word: 'tpeal'",
+    "answer": "plate",
+    "time_limit": 30
+  },
+  {
+    "id": "level7_deduction",
+    "type": "deduction",
+    "level": 7,
+    "question": "John is taller than Mary. Mary is taller than Tom. Who is the tallest?",
+    "answer": "John",
+    "time_limit": 25
+  },
+  {
+    "id": "level8_sequence_prediction",
+    "type": "sequence_prediction",
+    "level": 8,
+    "question": "What is the next number in the Fibonacci sequence: 0, 1, 1, 2, 3, 5, 8, ?",
+    "answer": "13",
+    "time_limit": 20
+  },
+  {
+    "id": "level9_spatial_reasoning",
+    "type": "spatial_reasoning",
+    "level": 9,
+    "question": "Identify the correct 3D shape from its 2D projection.",
+    "time_limit": 15
+  },
+  {
+    "id": "level10_cryptic_clues",
+    "type": "cryptic_clues",
+    "level": 10,
+    "question": "I speak without a mouth and hear without ears. I have no body, but I come alive with wind. What am I?",
+    "answer": "echo",
+    "time_limit": 10
+  }
+]
+
